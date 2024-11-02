@@ -15,11 +15,16 @@ export default function Collection() {
   const [loading, setLoading] = useState(true);
 
   const itemsPerPage = 12;
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   useEffect(() => {
     const timeout = setTimeout(() => {
       setLoading(false);
     }, 500);
+
+    
 
     return () => clearTimeout(timeout);
   }, [selectedCategory, currentPage]);

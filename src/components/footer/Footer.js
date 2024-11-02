@@ -35,18 +35,23 @@ export default function Footer() {
 
   const handleSubscribe = async (e) => {
     e.preventDefault();
+
+    if (!email) {
+      toast.error(t("Please enter a valid email"));
+      return;
+    }
+
     try {
       await sendToTelegram(email);
       toast.success(t("subscription Success"));
       setEmail('');
     } catch (error) {
-      toast.error(t("subscriptio nError"));
+      toast.error(t("subscriptionError"));
     }
   };
 
   return (
     <div className="container footer-container">
-      <ToastContainer position="top-right" />
       <div className="section">
         <Link to='/'>
           <img src={Logo} alt="Bukhara Natural Product Logo" className="logo" />
@@ -78,18 +83,20 @@ export default function Footer() {
       <div className="sectionf">
         <h4 className="heading">{t("footerSubscribe")}</h4>
         <div className="subscribe-container">
-          <input required
+          <input 
             type="email" 
             placeholder={t("footerEmailPlaceholder")} 
             className="input" 
             value={email}
             onChange={handleEmailChange}
+            required
           />
           <button className="subscribe-button" onClick={handleSubscribe}>
             {t("footerSubscribeButton")}
           </button>
         </div>
       </div>
+      <ToastContainer position="top-right" />
     </div>
   );
 }

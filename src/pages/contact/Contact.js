@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./contact.scss";
 import { Contacticon, Email, Adresscontact } from "../../helper/svgformatter/svgformatter";
 import { ToastContainer, toast } from "react-toastify";
@@ -6,6 +6,9 @@ import "react-toastify/dist/ReactToastify.css";
 import { useTranslation } from "react-i18next";
 
 export default function Contact() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const { t } = useTranslation();
 
   const [formData, setFormData] = useState({

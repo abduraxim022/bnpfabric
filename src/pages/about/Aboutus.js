@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useTranslation } from 'react-i18next';
 import Aboutusimg from '../../images/aboutus.png';
 import "./aboutus.scss"; 
 
 export default function Aboutus() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const { t } = useTranslation();
+  
 
  
   const repeatedText = "Bukhara textile, Eco furniture, Bukhara fabrics, Eco bags Bukhara Natural Product Company is pleased to serve its regular customers at any time.";

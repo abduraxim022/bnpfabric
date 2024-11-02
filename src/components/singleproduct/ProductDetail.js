@@ -1,10 +1,13 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import Slider from "react-slick";
 import data from "../../data/data";
 import "./singleproduct.scss";
 
 export default function ProductDetail() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const { title } = useParams();
   const allCollections = [
     ...data.regularCollections,
