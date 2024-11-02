@@ -20,10 +20,16 @@ p {
   margin-bottom: 10px;
 }
 
-.description {
+.descriptionfooter {
   font-size: 14px;
   color: #333;
   width: 250px;
+}
+
+.double{
+  width: 500px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .heading {
