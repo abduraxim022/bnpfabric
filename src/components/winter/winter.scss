@@ -1,0 +1,41 @@
+.collection-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); 
+    gap: 20px;
+  }
+  
+  .collection-card {
+    
+    transition: transform 0.3s;
+
+  }
+  
+  .collection-card:hover {
+    transform: scale(1.05); 
+  }
+  
+  .collection-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: box-shadow 0.3s;
+  }
+  
+  .collection-card:hover .collection-image {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
+  }
+  
+  .collection-title {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: black;
+    transition: color 0.3s;
+  }
+  
+  .collection-card:hover .collection-title {
+    color: red; 
+  }
+
+.kml{
+  margin-top: 150px;
+}

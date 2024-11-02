@@ -1,0 +1,36 @@
+.collection-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+  
+  
+  }
+  
+  .collection-card {
+    width: 224px;
+    cursor: pointer;
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .collection-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .collection-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .collection-title {
+    margin-top: 10px;
+    font-size: 18px;
+    color: black;
+    transition: color 0.3s ease;
+  }
+  
+  .collection-card:hover .collection-title {
+    color: red; 
+  }
+  

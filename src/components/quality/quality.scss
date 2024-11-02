@@ -1,0 +1,209 @@
+.quality-container {
+  width: auto;
+    height: 400px;
+
+
+  
+    .quality-img_container {
+      background-color: rgb(70, 67, 81);
+      height: 250px;
+      margin-top: 200px;
+      border-radius: 15px;
+      color: white;
+  
+      .text {
+        display: flex;
+        height: 100%;
+        justify-content: space-between;
+        align-items: center;
+
+        .left-text{
+          margin-left: 50px;
+          p{
+            font-size: 90px;
+            font-weight: 800;
+          }
+          h1{
+            font-size: 20px;
+          }
+        }
+
+        .right-text {
+          word-break: keep-all;
+          width: 420px;
+          h2{
+            font-size: 28px;
+            font-weight: 600px;
+          }
+  
+          p {
+            width: 400px;
+            margin-top: 10px;
+            font-size: 16px;
+            margin-bottom: 20px;
+          }
+  
+          .quality-btn {
+            background-color: #fff;
+            color: #5c2d91;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            width: 130px;
+  
+            &:hover {
+              background-color: #e6e6e6;
+            }
+          }
+        }
+      }
+    }
+
+    .p-100{
+      font-size: 90px;
+      font-weight: 800;
+    }
+  
+    .qu1-img,
+    .qu2-img,
+    .qu3-img {
+      width: 450px;
+      margin-left: 340px;
+      padding: 20px;
+      position: absolute;
+    }
+  
+    .qu1-img {
+      top: 830px;
+    }
+  
+    .qu2-img {
+      top: 2030px;
+    }
+  
+    .qu3-img {
+      top: 3200px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .quality-container {
+      width: 100%;
+      .quality-img_container {
+        border-radius: 25px;
+        position: relative;
+        width: 100%;
+        height: auto; 
+      
+        border-radius: 10px;
+        padding: 20px;
+        img{
+          max-width: 100%;
+          width: 400px;   
+         margin-top: -150px;
+
+
+        }
+  
+        .text {
+          word-wrap: break-word;
+          hyphens: auto;
+         
+          align-items: center;
+          text-align: center;
+          display: block;
+  
+          h1 {
+            margin-left: 0;
+            font-size: 1.8rem;
+          }
+  
+          .right-text {
+            width: 100%;
+            margin: 0 auto;
+            text-align: center;
+            h2{
+   
+            }
+            width: 100%; 
+            margin-top: 10px;
+  
+            p {
+              width: 100%;
+              max-width: 305px;
+              margin: 0 auto;
+              font-size: 0.9rem; 
+            }
+  
+            .quality-btn {
+              margin: 0 auto;
+              margin-top: 20px;
+              padding: 8px 16px; 
+            }
+          }
+        }
+      }
+  
+      .qu1-img, .qu2-img, .qu3-img {
+        width: 100%; 
+        margin-left: 0;
+        padding-bottom: 30px;
+        position: static; 
+      }
+    }
+  }
+  
+
+  @media (max-width: 467px) {
+    .quality-container {
+      .quality-img_container {
+        height: auto;
+     
+        padding: 15px;
+        border-radius: 8px;
+        img{
+          width: 300px;
+          padding: 30px;
+        }
+  
+        .text {
+          width: 100%;  
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+
+          .right-text{
+            h2{
+              font-size: 18px;
+            }
+
+            p{
+              font-size: 14px;
+              margin-top: 20px;
+            }
+          }
+
+          .left-text{
+            margin: 0 auto;
+            h1{
+              font-size: 14px;
+              margin-top: 15px;
+            }
+            p{
+              font-size: 25px;
+            }
+          }
+        }
+      }
+  
+      .qu1-img, .qu2-img, .qu3-img {
+        width: 100%; 
+        margin-left: 0;
+        padding-bottom: 20px;
+        position: static;
+      }
+    }
+  }

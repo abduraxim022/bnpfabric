@@ -1,0 +1,79 @@
+.collection-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); 
+  gap: 20px;
+}
+
+.collection-card {
+  max-width: 224px;
+  width: 100%;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.collection-card:hover {
+  transform: scale(1.05);
+}
+
+.collection-title {
+  color: black;
+  transition: color 0.2s;
+}
+
+.collection-card:hover .collection-title {
+  color: red;
+}
+
+.collection-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.title-div {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.title-div h1 {
+  font-family: "Poppins", Sans-serif;
+  font-size: 45px;
+  font-weight: 700;
+  line-height: 68px;
+  letter-spacing: -1.7px;
+}
+
+@media (max-width: 768px) {
+  .collection-container {
+    grid-template-columns: repeat(3, 1fr); 
+  }
+
+  .title-div h1 {
+    padding-top: 50px;
+    font-size: 20px;
+    line-height: 50px;
+  }
+  .title-div{
+    padding-top: 250px;
+  }
+
+}
+
+@media (max-width: 467px) {
+  .collection-container {
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    h4{
+      font-size: 14px;
+    }
+  }
+
+  .title-div h1 {
+    font-size: 30px;
+    line-height: 45px;
+  }
+  .title-div{
+    padding-top: 25px;
+  }
+}
