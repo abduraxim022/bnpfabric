@@ -10,8 +10,8 @@ export default function Footer() {
   const { t } = useTranslation();
   const [email, setEmail] = useState('');
 
-  const botToken = "YOUR_BOT_TOKEN";
-  const chatId = "YOUR_CHAT_ID";
+  const botToken = "8056479648:AAHNr3hOpOHVWyDPm5zgc4V5T0obDqYNjKU";
+  const chatId = "5126374949";
 
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
