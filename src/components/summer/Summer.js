@@ -1,20 +1,23 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import data from '../../data/data';
-import './summer.scss'
+import './summer.scss';
 
 export default function Summer() {
-  const summerCollections = data.suCollections;  
+  const { t } = useTranslation();
+  const summerCollections = data.suCollections;
+
   return (
     <div className="container">
       <div className="title-div">
-        <h1>Summer Collection</h1>
-        <h4>Bukhara Natural Product</h4>
+        <h1>{t('summercollection')}</h1>
+        <h4>{t('bukharaNaturalProduct')}</h4>
       </div>
 
       <div className="collection-container">
         {summerCollections.map((collection) => (
-          <div  className="collection-card" key={collection.id}>
+          <div className="collection-card" key={collection.id}>
             <Link to={`/product/${collection.title}`}>
               <img
                 src={collection.image}

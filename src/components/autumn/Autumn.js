@@ -2,15 +2,16 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import data from '../../data/data';
 import './autumn.scss'
-
+import { useTranslation } from 'react-i18next';
 export default function Autumn() {
-  const autumnCollections = data.auCollections;  
+  const autumnCollections = data.auCollections; 
+  const { t } = useTranslation(); 
 
   return (
     <div className="container">
       <div className="title-div">
-        <h1>Autumn Collection</h1>
-        <h4>Bukhara Natural Product</h4>
+      <h1>{t('autumnCollection')}</h1>
+      <h4>{t('bukharaNaturalProduct')}</h4>
       </div>
 
       <div  className="collection-container">

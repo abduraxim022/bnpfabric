@@ -26,3 +26,15 @@ li{
 a{
     text-decoration: none;
 }
+
+@media(max-width:467px){
+    .container{
+        overflow: hidden;
+    }
+}
+
+@media(max-width:768px){
+    .container{
+        overflow: hidden;
+    }
+}

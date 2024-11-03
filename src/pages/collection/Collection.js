@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import data from '../../data/data';
 import Pagination from '@mui/material/Pagination';
 import GridLoader from 'react-spinners/GridLoader';
@@ -8,6 +9,7 @@ import './collection.scss';
 export default function Collection() {
   const { regularCollections, auCollections, suCollections } = data;
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('');
@@ -15,6 +17,7 @@ export default function Collection() {
   const [loading, setLoading] = useState(true);
 
   const itemsPerPage = 12;
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -23,9 +26,6 @@ export default function Collection() {
     const timeout = setTimeout(() => {
       setLoading(false);
     }, 500);
-
-    
-
     return () => clearTimeout(timeout);
   }, [selectedCategory, currentPage]);
 
@@ -34,16 +34,16 @@ export default function Collection() {
 
   if (selectedCategory === 'winter') {
     collectionsToDisplay = regularCollections;
-    title = "Winter Collection";
+    title = t('winter');
   } else if (selectedCategory === 'autumn') {
     collectionsToDisplay = auCollections;
-    title = "Autumn Collection";
+    title = t('autumn');
   } else if (selectedCategory === 'summer') {
     collectionsToDisplay = suCollections;
-    title = "Summer Collection";
+    title = t('summer');
   } else {
     collectionsToDisplay = [...regularCollections, ...auCollections, ...suCollections];
-    title = "All Collections";
+    title = t('all');
   }
 
   const filteredCollections = collectionsToDisplay.filter((item) =>
@@ -79,17 +79,17 @@ export default function Collection() {
         <div className="search-bar">
           <input
             type="text"
-            placeholder="Search by title..."
+            placeholder={t('searchPlaceholder')}
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
           />
         </div>
         <div className="categories">
-          <h3>Categories</h3>
-          <p onClick={() => handleCategoryChange('')}>All</p>
-          <p onClick={() => handleCategoryChange('summer')}>Summer</p>
-          <p onClick={() => handleCategoryChange('winter')}>Winter</p>
-          <p onClick={() => handleCategoryChange('autumn')}>Autumn</p>
+          <h3>{t('categories')}</h3>
+          <p onClick={() => handleCategoryChange('')}>{t('all')}</p>
+          <p onClick={() => handleCategoryChange('summer')}>{t('summer')}</p>
+          <p onClick={() => handleCategoryChange('winter')}>{t('winter')}</p>
+          <p onClick={() => handleCategoryChange('autumn')}>{t('autumn')}</p>
         </div>
       </aside>
 
@@ -113,7 +113,7 @@ export default function Collection() {
                   </div>
                 ))
               ) : (
-                <p className="no-results">This item is not found</p>
+                <p className="no-results">{t('noResults')}</p>
               )}
             </div>
 

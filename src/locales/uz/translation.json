@@ -62,9 +62,35 @@
   "address": "Manzil: Buxoro, Alpomish ko'chasi 80.",
   "tel": "Tel: +998 93 383 75 85, +998 90 960 78 00",
   "info": "Email: info@bnpfabric.uz",
-  "sending": "Yuborilmoqda"
-
-
+  "sending": "Yuborilmoqda",
+  "autumnCollection": "Kuzgi Kolleksiya",
+  "bukharaNaturalProduct":"Buxoro Tabiiy Mahsuloti",
+  "summercollection":"Yozgi Kolleksiya",
+  "title": "Kolleksiyalar",
+  "winter": "Qishgi Kolleksiya",
+  "autumn": "Kuzgi Kolleksiya",
+  "summer": "Yozgi Kolleksiya",
+  "all": "Barcha Kolleksiyalar",
+  "searchPlaceholder": "Sarlavha bo‘yicha qidirish...",
+  "categories": "Toifalar",
+  "noResults": "Bu mahsulot topilmadi",
+  "productNotFound": "Mahsulot topilmadi",
+  "material": "Material",
+  "materialContent": "100% paxta flaneli",
+  "pillowcase": "Yostiq qoplamasi",
+  "pillowcaseSize": "50x70 sm (2 dona)",
+  "sheet": "Varq",
+  "sheetSize": "260x280 sm (1 dona)",
+  "duvetCover": "Yostiq qoplamasi",
+  "duvetCoverSize": "160x220 sm (2 dona)",
+  "size": "O'lcham",
+  "sizeContent": "Maxsus o'lcham",
+  "manufacturer": "Ishlab chiqaruvchi",
+  "manufacturerContent": "Buxoro Tabiiy Mahsuloti",
+  "category": "Toifasi",
+  "categoryContent": "Kuzgi Kolleksiya",
+  "similarProducts": "O'xshash mahsulotlar"
+  
 
   }
   

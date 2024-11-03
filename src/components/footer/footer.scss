@@ -123,3 +123,23 @@ a:hover {
   }
 
 }
+
+
+.Toastify {
+  &__toast {
+    max-width: 400px; 
+  }
+
+  @media (max-width: 768px) {
+    &__toast {
+      max-width: 350px; 
+    }
+  }
+
+  @media (max-width: 467px) {
+    &__toast {
+      max-width: 60%; 
+
+    }
+  }
+}

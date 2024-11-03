@@ -2,12 +2,16 @@ import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import Slider from "react-slick";
 import data from "../../data/data";
+import { useTranslation } from 'react-i18next';
 import "./singleproduct.scss";
 
 export default function ProductDetail() {
+  const { t } = useTranslation();
+  
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+  
   const { title } = useParams();
   const allCollections = [
     ...data.regularCollections,
@@ -19,7 +23,7 @@ export default function ProductDetail() {
   const [zoomStyle, setZoomStyle] = useState({});
 
   if (!collection) {
-    return <h2>Product not found</h2>;
+    return <h2>{t('productNotFound')}</h2>;
   }
 
   const categoryCollections =
@@ -93,48 +97,48 @@ export default function ProductDetail() {
           <table className="table styled-table">
             <tbody>
               <tr>
-                <td>Material:</td>
-                <td>100% cotton flannel</td>
+                <td>{t('material')}:</td>
+                <td>{t('materialContent')}</td>
               </tr>
               <tr>
-                <td>Pillowcase:</td>
-                <td>50x70 cm (2 pcs.)</td>
+                <td>{t('pillowcase')}:</td>
+                <td>{t('pillowcaseSize')}</td>
               </tr>
               <tr>
-                <td>Sheet:</td>
-                <td>260x280 cm (1 pc.)</td>
+                <td>{t('sheet')}:</td>
+                <td>{t('sheetSize')}</td>
               </tr>
               <tr>
-                <td>Duvet cover:</td>
-                <td>160x220 cm (2 pcs.)</td>
+                <td>{t('duvetCover')}:</td>
+                <td>{t('duvetCoverSize')}</td>
               </tr>
               <tr>
-                <td>Size:</td>
-                <td>Special size</td>
+                <td>{t('size')}:</td>
+                <td>{t('sizeContent')}</td>
               </tr>
               <tr>
-                <td>Manufacturer:</td>
-                <td>Bukhara Natural Product</td>
+                <td>{t('manufacturer')}:</td>
+                <td>{t('manufacturerContent')}</td>
               </tr>
             </tbody>
           </table>
           <p>
-            Category: <span style={{ color: "red" }}>Autumn Collection</span>
+            {t('category')}: <span style={{ color: "red" }}>{t('categoryContent')}</span>
           </p>
         </div>
       </div>
-<div className="similar-container">
-      <h2>Similar Products</h2>
-      <Slider {...sliderSettings} className="similar-products-slider">
-        {similarProducts.map((item) => (
-          <div key={item.id} className="similar-product-card">
-            <Link to={`/product/${item.title}`}>
-              <img src={item.image} alt={item.title} className="similar-product-image" />
-              <h3>{item.title}</h3>
-            </Link>
-          </div>
-        ))}
-      </Slider>
+      <div className="similar-container">
+        <h2>{t('similarProducts')}</h2>
+        <Slider {...sliderSettings} className="similar-products-slider">
+          {similarProducts.map((item) => (
+            <div key={item.id} className="similar-product-card">
+              <Link to={`/product/${item.title}`}>
+                <img src={item.image} alt={item.title} className="similar-product-image" />
+                <h3>{item.title}</h3>
+              </Link>
+            </div>
+          ))}
+        </Slider>
       </div>
     </div>
   );

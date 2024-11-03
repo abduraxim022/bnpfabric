@@ -10,8 +10,8 @@ export default function Footer() {
   const { t } = useTranslation();
   const [email, setEmail] = useState('');
 
-  const botToken = "8056479648:AAHNr3hOpOHVWyDPm5zgc4V5T0obDqYNjKU";
-  const chatId = "5126374949";
+  const botToken = "YOUR_BOT_TOKEN";
+  const chatId = "YOUR_CHAT_ID";
 
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
@@ -67,7 +67,7 @@ export default function Footer() {
             <li><Link to="/">{t("home")}</Link></li>
             <li><Link to="/about-us">{t("about")}</Link></li>
             <li><Link to="/collection">{t("collection")}</Link></li>
-            <li><Link to="/contacts">{t("contacts")}</Link></li>
+            <li><Link to="/contact">{t("contacts")}</Link></li>
           </ul>
         </div>
         <div className="section">
